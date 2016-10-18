@@ -1,6 +1,4 @@
-# Shard performance tests
-
-Performance tests for the Shard language.
+# Shard benchmark tests
 
 This repository contains benchmark tests for measuring Shard language library default implementation performance.
 Uses [google benchmark](https://github.com/google/benchmark) library.
