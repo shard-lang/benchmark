@@ -1,0 +1,4 @@
+-std=c++14
+-Wno-pragma-once-outside-header
+-Ivendor/benchmark/include
+-Ivendor/shard/include
