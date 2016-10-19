@@ -38,9 +38,13 @@ static void Tokenize(benchmark::State& state, std::string src)
 /* ************************************************************************* */
 
 // Sources
-BENCHMARK_CAPTURE(Tokenize, identifier, std::string("abcd"));
-BENCHMARK_CAPTURE(Tokenize, integer, std::string("12345678910"));
-BENCHMARK_CAPTURE(Tokenize, float, std::string("0.45678E12345"));
+BENCHMARK_CAPTURE(Tokenize, identifiers, 	std::string("abcdefghijk_23 kjad abf_lab a5435_2a1 k32a"));
+BENCHMARK_CAPTURE(Tokenize, integers, 		std::string("12345678910 123132485 4516411 3251156 2451"));
+BENCHMARK_CAPTURE(Tokenize, floats, 		std::string("3.141592653589 3.14 3.1515 0003.14 3201.18"));
+BENCHMARK_CAPTURE(Tokenize, floats_exp, 	std::string("1.45670e+25 1.23e-1 3.14E15 3.6E-8 3.215E2"));
+BENCHMARK_CAPTURE(Tokenize, strings, 		std::string("\"1.45678\"\"abdadhj\"\"bdakb\"\"hbvdhsd\"\"abdjbj\""));
+BENCHMARK_CAPTURE(Tokenize, chars, 			std::string("'a''b''c''d''e''f''g''h''i''j''k''l''m''n'"));
+BENCHMARK_CAPTURE(Tokenize, others, 		std::string("{}[:](),.-+/#&^*<>=%;~?!),.-+/#&^{!),.}[:]"));
 
 /* ************************************************************************* */
 
